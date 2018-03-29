@@ -6,10 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}</title>
-  <link rel="shortcut icon" href="{{ "/" | relative_url  }}assets/images/favicon.ico">
-  <link rel="stylesheet" href="{{ "/" | relative_url  }}assets/css/style.css">
-  <link rel="alternate" type="application/rss+xml" title="My Blog" href="{{ "/" | relative_url  }}feed.xml">
-  <link rel="stylesheet" href="{{ "/" | relative_url  }}assets/css/highlight.css">
+  <link rel="shortcut icon" href="https://micro.blog/{{ site.username }}/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/custom.css">
+
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="alternate" type="application/json" title="{{ site.title }}" href="{{ "/feed.json" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="EditURI" type="application/rsd+xml" href="{{ site.baseurl }}/rsd.xml" />
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/highlight.css">
+  <link rel="me" href="https://micro.blog/{{ site.username }}" />
+  {% if site.twitter_username != "" %}
+  	<link rel="me" href="https://twitter.com/{{ site.twitter_username }}" />
+  {% endif %}
+  {% if site.github_username != "" %}
+  	<link rel="me" href="https://github.com/{{ site.github_username }}" />
+  {% endif %}
+  {% if site.instagram_username != "" %}
+  	<link rel="me" href="https://instagram.com/{{ site.instagram_username }}" />
+  {% endif %}
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+  <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+  <link rel="micropub" href="https://micro.blog/micropub" />
+  <link rel="webmention" href="https://micro.blog/webmention" />
+  <link rel="subscribe" href="https://micro.blog/users/follow" />
 </head>
 <body>
 
@@ -24,19 +44,9 @@
   </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="{{ "/" | relative_url  }}assets/js/main.js"></script>
-  <script src="{{ "/" | relative_url  }}assets/js/highlight.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/highlight.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', '{{ site.google_analytics }}', 'auto');
-    ga('send', 'pageview');
-  </script>
 </body>
 </html>
 

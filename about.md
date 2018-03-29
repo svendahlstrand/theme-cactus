@@ -1,9 +1,10 @@
 ---
 title: About
-permalink: about/
-profile: true
+permalink: /about/
+layout: page
+order: 0
 ---
 
-This is a static page. It could be an 'about page' if you'd like.
+[ABOUT]
 
 {% include footer.html %}

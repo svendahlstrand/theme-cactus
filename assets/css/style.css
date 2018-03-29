@@ -186,7 +186,7 @@ ul 	{ margin:0; padding:0; }
 li	{ list-style-type:circle; list-style-position:inside; }
 
 /* Line Height */
-#post-body, p { line-height:1.7; }
+#post-body, p { line-height:1.7; font-size: 120%; }
 
 b, strong { font-weight: 500;
   color: #1E2025; }
@@ -355,6 +355,7 @@ thead th,th {
 img {
 	width: 100%;
 	max-width: 100%;
+	height: auto;
 	border-radius: 3px;
 }
 
@@ -397,8 +398,9 @@ Post List
 	float: right;
 	position: relative;
 	top: 1px;
-	font: 300 17px/1.8 "Helvetica Neue",helvetica,Arial,sans-serif;
+	font: 300 16px/1.8 "Helvetica Neue",helvetica,Arial,sans-serif;
 	color: #bbb;
+	padding-left: 20px;
 }
 
 #post-list-footer {
@@ -639,6 +641,14 @@ h2.month {
 
 	h1 { font-size: 26px; }
 	.post h2.headline { font-size: 13px; }
-	.post h1 { font-size:24px; }
-	.post h2 { font-size:20px; }
+	.post h1 { font-size:13px; }
+	.post h2 { font-size:13px; }
+}
+
+.mapping_github {
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+.github_help {
 }
