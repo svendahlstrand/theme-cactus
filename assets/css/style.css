@@ -475,6 +475,7 @@ Post List
 }
 
 #sharing {
+	display: none;
 	float: right;
 	margin: -2px;
 }
