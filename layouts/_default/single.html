@@ -1,0 +1,24 @@
+{{ define "main" }}
+<article class="post h-entry">
+    <header>
+		<h1>{{ .Title }}</h1>
+        <h2 class="headline"><time class="dt-published" datetime="{{ .Date }}">{{ .Date.Format "Jan 2, 2006" }}</time></h2>
+    </header>
+    <section id="post-body e-content">
+        {{ .Content }}
+    </section>
+</article>
+<footer id="post-meta" class="clearfix">
+    <a href="https://micro.blog/{{ .Site.Author.username }}">
+        <img class="avatar" src="{{ .Site.Author.avatar }}" />
+        <div>
+            <span class="dark">{{ .Site.Author.username }}</span>
+            <span>{{ .Site.Author.name }}</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        {{ partial "share.html" . }}
+    </section>
+</footer>
+{{ end }}

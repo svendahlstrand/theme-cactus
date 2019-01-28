@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+<body>
+  {{ partial "header.html" . }}
+  
+  <section id="wrapper" class="{{ if .IsHome }}home{{ end }}">
+	{{ block "main" . }}{{ end }}
+  </section>
+
+  {{ partial "footer.html" . }}
+  {{ partial "custom_footer.html" . }}
+</body>
+</html>
+
+
+
