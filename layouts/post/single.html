@@ -4,7 +4,7 @@
 		{{ if .Title }}
 			<h1>{{ .Title }}</h1>
 		{{ end }}
-        <h2 class="headline"><time class="dt-published" datetime="{{ .Date }}">{{ .Date.Format "Jan 2, 2006" }}</time></h2>
+        <h2 class="headline"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time></h2>
     </header>
     <section id="post-body e-content">
         {{ .Content }}

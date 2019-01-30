@@ -4,7 +4,7 @@
 {{ range $paginator.Pages  }}
 
         <li class="h-entry">
-            <a href="{{ .Permalink }}" class="u-url"><aside class="dates"><time datetime="{{ .Date }}" class="dt-published">{{ .Date.Format "3:04 AM, Jan 2" }}</time></aside></a>
+            <a href="{{ .Permalink }}" class="u-url"><aside class="dates"><time datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}" class="dt-published">{{ .Date.Format "3:04 AM, Jan 2" }}</time></aside></a>
 			{{ if .Title }}
 				<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 			{{ end }}
