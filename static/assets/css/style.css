@@ -653,3 +653,7 @@ h2.month {
 
 .github_help {
 }
+
+video {
+	max-width: 100%;
+}
