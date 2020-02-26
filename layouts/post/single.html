@@ -10,6 +10,11 @@
         {{ .Content }}
     </section>
 </article>
+
+{{ if .Site.Params.include_conversation }}
+<script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
+{{ end }}
+
 <footer id="post-meta" class="clearfix">
     <a href="https://micro.blog/{{ .Site.Author.username }}">
         <img class="avatar" src="{{ .Site.Author.avatar }}" width="96" height="96" />
